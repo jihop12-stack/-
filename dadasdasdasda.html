@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>박스모델</title>
+    <style>
+        #d1{
+            width: 300px;
+            background-color: salmon;
+            border: 10px solid blue;
+            box-sizing: border-box;
+            box-shadow: 10px 20px 0 10px red;
+        }
+        #d2{
+            background-color: salmon;
+            /*
+            1개: 위아래+양옆
+            2개: 위아래 따로, 양 옆 따로
+            4개: 위 > 오른쪽 > 아래 > 왼쪽 순 적용
+            */
+            padding: 10;
+            width: 100px;
+            border: 10px solid blue;
+            box-sizing: border-box;
+            /*padding-top: 30px;*/
+            /*padding-bottom: 30px;*/
+        }
+        span{
+            width: 10000px;
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius et id illum iusto tenetur ullam, veniam? A accusamus adipisci aperiam dolorem, ex facilis, impedit iusto praesentium sequi sit suscipit ullam.</div>
+    <div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda blanditiis eveniet ex exercitationem, expedita id ipsum minus nesciunt non officia praesentium quis quisquam repellendus, reprehenderit repudiandae saepe sapiente unde vero!</div>
+    <span>span</span>
+</body>
+</html>
