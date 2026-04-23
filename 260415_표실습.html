@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>표 실습</title>
+    <style>
+        #t1{
+            caption-side: bottom;
+            border-collapse: collapse;
+        }
+        #t2{
+            text-align: center;
+            width: 400px;
+        }
+        /* id=t2 가 있는 요소 바로 아래의 caption 태그에 적용 */
+        #t2 > caption{
+            color: blue;
+            font-weight: bold;
+        }
+        td, th{
+            border: 1px solid black;
+        }
+        .group{
+            text-align: center;
+            font-weight: bold;
+            background-color: azure;
+        }
+        /* thead 내부의 th와, tfoot 내부의 td 에게 적용 */
+        thead th, tfoot td {
+            background-color: beige;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <table id="t1">
+        <caption>2019 국민 도서실태</caption>
+        <tr>
+            <td class="group">구분</td>
+            <td class="group">성인</td>
+            <td class="group">독서자</td>
+        </tr>
+        <tr>
+            <td class="group">종이책</td>
+            <td>6.1권</td>
+            <td>11.7권</td>
+        </tr>
+        <tr>
+            <td class="group">전자책</td>
+            <td>6.1권</td>
+            <td>11.7권</td>
+        </tr>
+        <tr>
+            <td class="group">오디오북</td>
+            <td>6.1권</td>
+            <td>11.7권</td>
+        </tr>
+    </table>
+
+    <table id="t2">
+        <caption>요안도라 객실</caption>
+        <thead>
+            <tr>
+                <th>방이름</th>
+                <th>대상</th>
+                <th>크기</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>유채방</td>
+                <td>여성 도미토리</td>
+                <td rowspan="3">4인실</td>
+                <td rowspan="4">1인 20,000원</td>
+            </tr>
+            <tr>
+                <td>동백방</td>
+                <td>동성 도미토리</td>
+            </tr>
+            <tr>
+                <td>동백방</td>
+                <td>가족 1팀</td>
+            </tr>
+            <tr>
+                <td>천혜향방</td>
+                <td>-</td>
+                <td>2인실</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">바깥채 ~~~~~~~~</td>
+            </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+</html>
